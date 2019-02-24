@@ -37,4 +37,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	//hello.do로 요청이 들어올 때 호출되는 method
+	@RequestMapping("/hello.do")
+	public String hello(Model model) {
+		//hello.jsp로 포워딩 됨
+		model.addAttribute("name", "김철수");
+		return "hello";
+	}
 }
