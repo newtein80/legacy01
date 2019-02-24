@@ -5,13 +5,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
 <mapper namespace="memo">
-	<select id="memoList" resultType="com.example.sample.model.dto.MemoDTO">
+	<select id="memoList" resultType="com.lifesoft.legacy01.model.dto.MemoDTO">
 		select * from memo
 		order by idx
 		desc
 	</select>
 
-	<select id="memoDetail" resultType="com.example.sample.model.dto.MemoDTO">
+	<select id="memoDetail" resultType="com.lifesoft.legacy01.model.dto.MemoDTO">
 		select *
 		from memo
 		where
