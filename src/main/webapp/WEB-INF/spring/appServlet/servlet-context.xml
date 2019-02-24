@@ -16,11 +16,13 @@
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- View 에 대한 중간 매개체 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	<!-- 스프링 빈을 태그로 등록하지 않고 자동으로 검색(auto scan) --> 
+	<!-- Annotation 이 붙어있는 클래스들을 모두 탐색하여 Singleton(비번히 사용하는 객체를 static으로 올려서 하나를 사용(??))으로 모두 서버에 올림 -->
 	<context:component-scan base-package="com.lifesoft.legacy01" />
 	
 	

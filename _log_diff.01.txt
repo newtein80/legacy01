@@ -1,0 +1,320 @@
+2월 24, 2019 6:14:45 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+2월 24, 2019 6:14:45 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+2월 24, 2019 6:14:45 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+2월 24, 2019 6:14:45 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+2월 24, 2019 6:14:45 오후 org.apache.tomcat.util.digester.SetPropertiesRule begin
+경고: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:legacy01' did not find a matching property.
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server version:        Apache Tomcat/8.0.50
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server built:          Feb 7 2018 20:06:05 UTC
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server number:         8.0.50.0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Name:               Windows 10
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Version:            10.0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Architecture:          amd64
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Java Home:             C:\zulu\zulu-8\jre
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Version:           1.8.0_202-b05
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Vendor:            Azul Systems, Inc.
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_BASE:         C:\Users\Newtein\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 8.0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.base=C:\Users\Newtein\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 8.0
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dwtp.deploy=C:\Users\Newtein\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.endorsed.dirs=C:\Program Files\Apache Software Foundation\Tomcat 8.0\endorsed
+2월 24, 2019 6:14:45 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dfile.encoding=UTF-8
+2월 24, 2019 6:14:45 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+2월 24, 2019 6:14:46 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["http-nio-8181"]
+2월 24, 2019 6:14:46 오후 org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+정보: Using a shared selector for servlet write/read
+2월 24, 2019 6:14:46 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["ajp-nio-8009"]
+2월 24, 2019 6:14:46 오후 org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+정보: Using a shared selector for servlet write/read
+2월 24, 2019 6:14:46 오후 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 725 ms
+2월 24, 2019 6:14:46 오후 org.apache.catalina.core.StandardService startInternal
+정보: Starting service Catalina
+2월 24, 2019 6:14:46 오후 org.apache.catalina.core.StandardEngine startInternal
+정보: Starting Servlet Engine: Apache Tomcat/8.0.50
+2월 24, 2019 6:14:49 오후 org.apache.jasper.servlet.TldScanner scanJars
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2월 24, 2019 6:14:54 오후 org.apache.jasper.servlet.TldScanner scanJars
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/Newtein/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/legacy01/WEB-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/Newtein/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/legacy01/WEB-INF/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+18:14:54,319 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+18:14:54,319 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+18:14:54,319 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/Newtein/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/legacy01/WEB-INF/classes/logback.xml]
+18:14:54,413 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.sqlonly] to DEBUG
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.sqltiming] to INFO
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.audit] to WARN
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.resultset] to ERROR
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.resultsettable] to ERROR
+18:14:54,423 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.connection] to INFO
+18:14:54,423 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+18:14:54,431 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+18:14:54,502 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+18:14:54,502 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+18:14:54,502 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+18:14:54,502 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+18:14:54,507 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [LOGFILE]
+18:14:54,519 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@944970451 - No compression will be used
+18:14:54,521 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@944970451 - Will use the pattern logback.%d{yyyy-MM-dd}.log for the active file
+18:14:54,530 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'logback.%d{yyyy-MM-dd}.log'.
+18:14:54,530 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+18:14:54,531 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sun Apr 29 03:23:46 KST 2018
+18:14:54,533 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+18:14:54,537 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGFILE] - Active log file name: /WEB-INF/logback.log
+18:14:54,537 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGFILE] - File property is set to [/WEB-INF/logback.log]
+18:14:54,538 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [myweb] to false
+18:14:54,538 |-INFO in ch.qos.logback.classic.joran.action.LevelAction - myweb level set to INFO
+18:14:54,538 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [LOGFILE] to Logger[myweb]
+18:14:54,539 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[myweb]
+18:14:54,539 |-INFO in ch.qos.logback.classic.joran.action.LevelAction - ROOT level set to INFO
+18:14:54,539 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+18:14:54,539 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+18:14:54,540 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7f5cc1c - Registering current configuration as safe fallback point
+
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+2월 24, 2019 6:14:54 오후 org.apache.catalina.core.ApplicationContext log
+정보: No Spring WebApplicationInitializer types detected on classpath
+2월 24, 2019 6:14:54 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring root WebApplicationContext
+18:14:54.564 [localhost-startStop-1] INFO [org.springframework.web.context.ContextLoader.initWebApplicationContext:270]-
+				Root WebApplicationContext: initialization started
+18:14:54.652 [localhost-startStop-1] INFO [org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh:589]-
+				Refreshing Root WebApplicationContext: startup date [Sun Feb 24 18:14:54 KST 2019]; root of context hierarchy
+18:14:54.724 [localhost-startStop-1] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316]-
+				Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+18:14:55.117 [localhost-startStop-1] INFO [org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133]-
+				Loaded JDBC driver: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+18:14:55.512 [localhost-startStop-1] INFO [org.springframework.web.context.ContextLoader.initWebApplicationContext:310]-
+				Root WebApplicationContext: initialization completed in 943 ms
+2월 24, 2019 6:14:55 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring FrameworkServlet 'appServlet'
+18:14:55.551 [localhost-startStop-1] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:494]-
+				FrameworkServlet 'appServlet': initialization started
+18:14:55.554 [localhost-startStop-1] INFO [org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh:589]-
+				Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:14:55 KST 2019]; parent: Root WebApplicationContext
+18:14:55.555 [localhost-startStop-1] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316]-
+				Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+18:14:55.901 [localhost-startStop-1] INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>:154]-
+				JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+18:14:56.173 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_view.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo_view(int)
+18:14:56.174 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_update.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_update(com.lifesoft.legacy01.model.dto.MemoDTO,org.springframework.validation.BindingResult)
+18:14:56.174 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_delete.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_delete(int)
+18:14:56.174 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_list.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo_list()
+18:14:56.174 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_insert.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_insert(com.lifesoft.legacy01.model.dto.MemoDTO)
+18:14:56.175 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo()
+18:14:56.176 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lifesoft.legacy01.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+18:14:56.588 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:567]-
+				Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:14:55 KST 2019]; parent: Root WebApplicationContext
+18:14:56.654 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:567]-
+				Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:14:55 KST 2019]; parent: Root WebApplicationContext
+18:14:56.728 [localhost-startStop-1] INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373]-
+				Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+18:14:56.820 [localhost-startStop-1] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:513]-
+				FrameworkServlet 'appServlet': initialization completed in 1269 ms
+2월 24, 2019 6:14:56 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["http-nio-8181"]
+2월 24, 2019 6:14:56 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["ajp-nio-8009"]
+2월 24, 2019 6:14:56 오후 org.apache.catalina.startup.Catalina start
+정보: Server startup in 10619 ms
+
+
+=======================================================================================================================================================
+=======================================================================================================================================================
+=======================================================================================================================================================
+
+[Tomcat 8.0]: Listening for transport dt_socket at address: 8000
+[Tomcat 8.0]: usage: java org.apache.catalina.startup.Catalina [ -config {pathname} ] [ -nonaming ]  { -help | start | stop }
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server version:        Apache Tomcat/8.0.50
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server built:          Feb 7 2018 20:06:05 UTC
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server number:         8.0.50.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Name:               Windows 10
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Version:            10.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Architecture:          amd64
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Java Home:             C:\zulu\zulu-8\jre
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Version:           1.8.0_202-b05
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Vendor:            Azul Systems, Inc.
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_BASE:         C:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 8.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -agentlib:jdwp=transport=dt_socket,suspend=n,server=y,address=localhost:8000
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.base=c:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.home=c:\Program Files\Apache Software Foundation\Tomcat 8.0
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dfile.encoding=UTF8
+2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.io.tmpdir=c:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0\temp
+2월 24, 2019 6:16:16 오후 org.apache.catalina.core.AprLifecycleListener init
+심각: An incompatible version 1.1.20 of the APR based Apache Tomcat Native library is installed, while Tomcat requires version 1.1.32
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["http-nio-8181"]
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+정보: Using a shared selector for servlet write/read
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["ajp-nio-8009"]
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+정보: Using a shared selector for servlet write/read
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 645 ms
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.StandardService startInternal
+정보: Starting service Catalina
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.core.StandardEngine startInternal
+정보: Starting Servlet Engine: Apache Tomcat/8.0.50
+[Tomcat 8.0]: 2월 24, 2019 6:16:16 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory C:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0\webapps\legacy01-1.0.0-BUILD-SNAPSHOT
+[Tomcat 8.0]: 2월 24, 2019 6:16:19 오후 org.apache.jasper.servlet.TldScanner scanJars
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[Tomcat 8.0]: SLF4J: Class path contains multiple SLF4J bindings.[Tomcat 8.0]: 
+SLF4J: Found binding in [jar:file:/C:/Users/Newtein/AppData/Roaming/Code/User/workspaceStorage/983a71a961bc5e5c613dfff53af5dcf0/adashen.vscode-tomcat/tomcat/Tomcat%208.0/webapps/legacy01-1.0.0-BUILD-SNAPSHOT/WEB-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/Newtein/AppData/Roaming/Code/User/workspaceStorage/983a71a961bc5e5c613dfff53af5dcf0/adashen.vscode-tomcat/tomcat/Tomcat%208.0/webapps/legacy01-1.0.0-BUILD-SNAPSHOT/WEB-INF/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[Tomcat 8.0]: 18:16:20,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+18:16:20,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+18:16:20,094 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/Newtein/AppData/Roaming/Code/User/workspaceStorage/983a71a961bc5e5c613dfff53af5dcf0/adashen.vscode-tomcat/tomcat/Tomcat%208.0/webapps/legacy01-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/logback.xml]
+18:16:20,189 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.sqlonly] to DEBUG
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.sqltiming] to INFO
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.audit] to WARN
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.resultset] to ERROR
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.resultsettable] to ERROR
+18:16:20,200 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [jdbc.connection] to INFO
+18:16:20,200 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+18:16:20,209 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+18:16:20,288 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+18:16:20,288 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+18:16:20,288 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+18:16:20,289 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+18:16:20,294 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [LOGFILE]
+18:16:20,310 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@353210578 - No compression will be used
+18:16:20,312 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@353210578 - Will use the pattern logback.%d{yyyy-MM-dd}.log for the active file
+18:16:20,323 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'logback.%d{yyyy-MM-dd}.log'.
+18:16:20,323 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+18:16:20,323 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sun Apr 29 03:23:46 KST 2018
+18:16:20,325 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+18:16:20,332 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGFILE] - Active log file name: /WEB-INF/logback.log
+18:16:20,332 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGFILE] - File property is set to [/WEB-INF/logback.log]
+18:16:20,335 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [myweb] to false
+18:16:20,335 |-INFO in ch.qos.logback.classic.joran.action.LevelAction - myweb level set to INFO
+18:16:20,336 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [LOGFILE] to Logger[myweb]
+18:16:20,337 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[myweb]
+18:16:20,337 |-INFO in ch.qos.logback.classic.joran.action.LevelAction - ROOT level set to INFO
+18:16:20,337 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+18:16:20,337 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+18:16:20,338 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@74ea85c3 - Registering current configuration as safe fallback point
+
+[Tomcat 8.0]: SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+[Tomcat 8.0]: 2월 24, 2019 6:16:20 오후 org.apache.catalina.core.ApplicationContext log
+정보: No Spring WebApplicationInitializer types detected on classpath
+[Tomcat 8.0]: 2월 24, 2019 6:16:20 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring root WebApplicationContext
+[Tomcat 8.0]: 18:16:20.371 [localhost-startStop-1] INFO [org.springframework.web.context.ContextLoader.initWebApplicationContext:270]-
+				Root WebApplicationContext: initialization started
+[Tomcat 8.0]: 18:16:20.474 [localhost-startStop-1] INFO [org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh:589]-
+				Refreshing Root WebApplicationContext: startup date [Sun Feb 24 18:16:20 KST 2019]; root of context hierarchy
+[Tomcat 8.0]: 18:16:20.579 [localhost-startStop-1] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316]-
+				Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+[Tomcat 8.0]: Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+[Tomcat 8.0]: 18:16:21.021 [localhost-startStop-1] INFO [org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName:133]-
+				Loaded JDBC driver: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+[Tomcat 8.0]: 18:16:21.441 [localhost-startStop-1] INFO [org.springframework.web.context.ContextLoader.initWebApplicationContext:310]-
+				Root WebApplicationContext: initialization completed in 1065 ms
+[Tomcat 8.0]: 2월 24, 2019 6:16:21 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring FrameworkServlet 'appServlet'
+[Tomcat 8.0]: 18:16:21.501 [localhost-startStop-1] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:494]-
+				FrameworkServlet 'appServlet': initialization started
+[Tomcat 8.0]: 18:16:21.503 [localhost-startStop-1] INFO [org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh:589]-
+				Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:16:21 KST 2019]; parent: Root WebApplicationContext
+[Tomcat 8.0]: 18:16:21.504 [localhost-startStop-1] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions:316]-
+				Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+[Tomcat 8.0]: 18:16:21.940 [localhost-startStop-1] INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>:154]-
+				JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[Tomcat 8.0]: 18:16:22.319 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo()
+[Tomcat 8.0]: 18:16:22.321 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_list.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo_list()
+[Tomcat 8.0]: 18:16:22.322 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_delete.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_delete(int)
+[Tomcat 8.0]: 18:16:22.322 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_view.do]}" onto public org.springframework.web.servlet.ModelAndView com.lifesoft.legacy01.controller.MemoController.memo_view(int)
+[Tomcat 8.0]: 18:16:22.323 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_insert.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_insert(com.lifesoft.legacy01.model.dto.MemoDTO)
+[Tomcat 8.0]: 18:16:22.323 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/memo_update.do]}" onto public java.lang.String com.lifesoft.legacy01.controller.MemoController.memo_update(com.lifesoft.legacy01.model.dto.MemoDTO,org.springframework.validation.BindingResult)
+[Tomcat 8.0]: 18:16:22.325 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.register:549]-
+				Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lifesoft.legacy01.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[Tomcat 8.0]: 18:16:22.874 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:567]-
+				Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:16:21 KST 2019]; parent: Root WebApplicationContext
+[Tomcat 8.0]: 18:16:22.963 [localhost-startStop-1] INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:567]-
+				Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 24 18:16:21 KST 2019]; parent: Root WebApplicationContext
+[Tomcat 8.0]: 18:16:23.089 [localhost-startStop-1] INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373]-
+				Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[Tomcat 8.0]: 18:16:23.274 [localhost-startStop-1] INFO [org.springframework.web.servlet.DispatcherServlet.initServletBean:513]-
+				FrameworkServlet 'appServlet': initialization completed in 1773 ms
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory C:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0\webapps\legacy01-1.0.0-BUILD-SNAPSHOT has finished in 6,388 ms
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory C:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0\webapps\ROOT
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deployment of web application directory C:\Users\Newtein\AppData\Roaming\Code\User\workspaceStorage\983a71a961bc5e5c613dfff53af5dcf0\adashen.vscode-tomcat\tomcat\Tomcat 8.0\webapps\ROOT has finished in 21 ms
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["http-nio-8181"]
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["ajp-nio-8009"]
+[Tomcat 8.0]: 2월 24, 2019 6:16:23 오후 org.apache.catalina.startup.Catalina start
+정보: Server startup in 6477 ms

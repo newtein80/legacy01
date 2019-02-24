@@ -33,6 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
+		// servletContext 의 ViewResolver가 동작
 		return "home";
 	}
 	
