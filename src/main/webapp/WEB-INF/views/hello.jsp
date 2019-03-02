@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script> -->
+    <%@ include file="include/header.jsp" %>
 </head>
+
 <body>
-	<h2>hello~!</h2>
-	<h2>${name} 님 환영합니다.</h2>
+    <%@ include file="include/menu.jsp" %>
+    <h2>hello~!</h2>
+    <h2>${name} 님 환영합니다.</h2>
 </body>
+
 </html>

@@ -13,3 +13,18 @@
 3. re 패키징
 4. Tomcat Server war 선택
 5. Tomcat Server Debugging war
+
+sqlplus system/xxxxxx
+
+alter session set "_ORACLE_SCRIPT" = true;
+
+create tablespace spring
+datafile {path}/spring.dbf size 50m
+autoextend on
+next 10m
+maxsize unlimited;
+
+create user spring identified by xxxxxx
+default tablespace spring;
+
+grant connect,resource,dba to spring

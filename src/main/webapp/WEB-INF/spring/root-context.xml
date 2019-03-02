@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+						http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 	
 	<!-- 이클립스의 경우 Beans Graph를 보면 root-context.xml의 구조를 도식화하여 볼 수 있음 -->
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- <bean id="참조변수" class="자료형"> -->
+	<!-- ex. <bean id="str" class="String"> == String str = new String(); -->
 	<!-- 데이터 소스가 실제 오라클에 접속하는 클래스 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
 		<!-- 드라이버 클래스 이름이 변경됨 -->
+		<!-- DriverSpy : 쿼리가 로그에 표시됨 -->
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<!-- 연결문자열에 log4jdbc가 추가됨 -->
-		<property name="url" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe" />
+		<!-- <property name="url" value="jdbc:log4jdbc:oracle:thin:@10.10.50.127:1521:sse" /> -->
+		<!-- <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" /> -->
+		<property name="url" value="jdbc:log4jdbc:oracle:thin:@127.0.0.1:1521:orcl" />
 		<property name="username" value="spring" />
-		<property name="password" value="1234" />
+		<property name="password" value="#skdlf12" />
 	</bean>
 	<!-- 아파치 DBCP 설정 -->
 	<!--

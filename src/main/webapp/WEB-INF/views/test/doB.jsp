@@ -6,10 +6,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
+    <%@ include file="../include/header.jsp" %>
 </head>
 
 <body>
-    <a href="<%=request.getContextPath()%>/memo.do">메모장</a>
+    <%@ include file="../include/menu.jsp" %>
+    <h2>doB 페이지</h2>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
 
 	<!-- jQuery를 인식하게 하기 위해서 -->
 	<!-- WEB-INF는 접근할 수 없으니 WEB-INF안에 넣는 것을 권장한다!!!(보안문제), ** : 하위디렉토리는 상관하지 않는다.-->
-	<!-- <resources location="/WEB-INF/views/include/" mapping="/include/**"/> -->
+	<resources location="/WEB-INF/views/include/" mapping="/include/**"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<!-- View 에 대한 중간 매개체 -->
