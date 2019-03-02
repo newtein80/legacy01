@@ -17,6 +17,10 @@
 	<!-- 웹에서 사용하는 리소스 -->
 	<resources mapping="/resources/**" location="/resources/" />
 
+	<!-- jQuery를 인식하게 하기 위해서 -->
+	<!-- WEB-INF는 접근할 수 없으니 WEB-INF안에 넣는 것을 권장한다!!!(보안문제), ** : 하위디렉토리는 상관하지 않는다.-->
+	<!-- <resources location="/WEB-INF/views/include/" mapping="/include/**"/> -->
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<!-- View 에 대한 중간 매개체 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,8 +29,22 @@
 	</beans:bean>
 	<!-- 스프링 빈을 태그로 등록하지 않고 자동으로 검색(auto scan) --> 
 	<!-- Annotation 이 붙어있는 클래스들을 모두 탐색하여 Singleton(비번히 사용하는 객체를 static으로 올려서 하나를 사용(??))으로 모두 서버에 올림 -->
+	<!-- src/main/java 위치의 com.example.spring01 안의 클래스들을 스프링에서 매핑해서 읽어들인다는 설정, java 클래스 위에 @Controller 를 선언하면 됨-->
+	<!-- 스프링 빈을 태그로 등록하지 않고 자동으로 검색(auto scan) -->
+	<!-- 스프링에서 관리하는 bean(Java의 클래스 인스턴스??)의 기본 디렉토리 -->
 	<context:component-scan base-package="com.lifesoft.legacy01" />
 	<!-- 위의 설정이 없을 경우 아래와 같이 일일히 작성하여 사용하여야 한다. -->
 	<!-- <bean id="homeContorller" class="com.lifesoft.legacy01.HomeController" /> -->
 	<!-- HomeController homeController = new HomeController(); 와 같은 의미 -->
+
+	<!--
+	bean을 xml로 등록하는 방법
+	<beans:bean id="참조변수" class="클래스 이름">
+	</beans:bean>
+	
+	Ex.
+	<beans:bean id="homeController" class="com.example.spring01.HomeController">
+	</beans:bean>
+	==> HomeController homeController = new HomeController(); 
+	 -->
 </beans:beans>

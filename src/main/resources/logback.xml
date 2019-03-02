@@ -30,6 +30,7 @@
 	</appender>
 
 	<!-- 로그의 레벨( 지정된 로그 레벨 이상만 수집 ) : DEBUG < INFO < WARN < ERROR < FATAL -->
+	<!-- 아래 level value에 INFO일 경우 INFO이상의 로그만 출력함 -->
 	<logger name="myweb" additivity="false">
 		<level value="INFO" />
 		<appender-ref ref="LOGFILE" />
