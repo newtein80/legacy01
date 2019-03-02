@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
+	/**
+	 * 로그를 수집할 클래스에 변수 선언
+	 * private: 외부에서 로그를 가로채지 못하도록 하기 위해서
+	 * static final: 로그내용이 바뀌지 않도록
+	 */
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
