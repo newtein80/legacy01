@@ -34,7 +34,7 @@ public class MybatisTest {
 	public void testSession() {
 		try(SqlSession sqlSession = sqlFactory.openSession()) {
 			logger.info("sqlSession:" + sqlSession);
-			logger.info("mybatis 연결 성공");
+			logger.info("mybatis Connect Success");
 		} catch (Exception e) {
 
 		}

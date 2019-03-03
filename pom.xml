@@ -215,11 +215,12 @@
 		</dependency>
 	
 		<!-- Test -->
+		<!-- org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test 에러발생하여 test 주석처리하고 version 올림 -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
+			<version>4.12</version>
+			<!-- <scope>test</scope> -->
 		</dependency>        
 	</dependencies>
     <build>

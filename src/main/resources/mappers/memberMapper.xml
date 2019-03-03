@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="member">
+	<!-- alias를 써서 줄여도 된다. resultType은 mybatis-config.xml에 typeAliases에 추가하여 짧게 만들 수 있다. -->
+	<select id="memberList" resultType="com.lifesoft.legacy01.model.dto.MemberDTO">
+		select
+		*
+		from member
+		order by name
+	</select>
+	<insert id="insertMember">
+		insert into member (userid, passwd, name, email)
+		values (#{userid}, #{passwd}, #{name}, #{email})
+	</insert>
+	<!-- <select id="viewMember" resultType="com.example.spring01.model.dto.MemberDTO"> -->
+	<select id="viewMember" resultType="memberDto">
+		select * from member
+		where userid=#{userid}
+	</select>
+	<update id="updateMember">
+		update member
+		set passwd=#{passwd}, name=#{name}, email=#{email}
+		where userid=#{userid}
+	</update>
+	<select id="checkPw" resultType="int">
+		select
+			count(userid)
+		from member
+		where userid=#{userid} and passwd=#{passwd}
+	</select>
+	<delete id="deleteMember">
+		delete from member
+		where userid=#{userid}
+	</delete>
+</mapper>
