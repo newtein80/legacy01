@@ -19,7 +19,9 @@
 		<org.aspectj-version>1.8.10</org.aspectj-version>
 		<org.slf4j-version>1.7.25</org.slf4j-version>
 		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+		<finalName>${project.artifactId}</finalName>
 	</properties>
+	
 
 	<!-- https://okky.kr/article/382435 -->
 	<repositories>
@@ -224,6 +226,11 @@
 		</dependency>        
 	</dependencies>
     <build>
+		<!-- https://www.lesstif.com/pages/viewpage.action?pageId=20776462 -->
+		<!-- https://www.lesstif.com/pages/viewpage.action?pageId=14745616 -->
+		<!-- https://examples.javacodegeeks.com/enterprise-java/tomcat/tomcat-server-xml-configuration-example/ -->
+		<finalName>${finalName}</finalName>
+		<!-- <finalName>ROOT.war</finalName> -->
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
