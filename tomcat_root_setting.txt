@@ -7,7 +7,81 @@ https://bigzero37.tistory.com/16
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
 </Context>
 
+=================== CORRECT ======================================
+==================================================================
+https://everydayminder.wordpress.com/2012/01/01/war-%EB%B0%B0%ED%8F%AC%EC%8B%9C-root-context%EB%A1%9C-%ED%95%98%EB%A0%A4%EB%A9%B4/
+==================================================================
 
+================ (1) pom.xml =====================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+	<groupId>ttt</groupId>
+	<artifactId>ncis</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0</version>
+	<name>ncis</name>
+	<url>http://www.ttt.kr</url>
+
+	<properties>
+	    <spring.maven.artifact.version>4.1.2.RELEASE</spring.maven.artifact.version>
+		<egovframework.rte.version>3.6.0</egovframework.rte.version>
+		<hikaricp.version>2.4.4</hikaricp.version>
+		<org.apache.tiles.version>3.0.3</org.apache.tiles.version>
+		<jackson.version>2.8.5</jackson.version>
+		<commons.version>1.2</commons.version>
+		<apache.common.io>2.5</apache.common.io>
+		<apache.httpcomponents.version>4.4.1</apache.httpcomponents.version>
+		<poi.version>3.12</poi.version>
+		<!-- <finalName>${project.artifactId}</finalName> -->
+		<finalName>ROOT</finalName>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>mvn2</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+    ................
+
+    <build>
+      <defaultGoal>install</defaultGoal>
+      <directory>${basedir}/target</directory>
+      <!-- <finalName>${artifactId}-${version}</finalName> -->
+      <!-- <finalName>${finalName}</finalName> -->
+      <finalName>ROOT</finalName>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.tomcat.maven</groupId>
+
+    ................
+
+==================================================================
+================ (2) server.xml ==================================
+
+<Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
+  <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" prefix="localhost_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b"/>
+  <Context path="/" docBase="ROOT">
+    <!-- Default set of monitored resources -->
+    <!-- <WatchedResource>WEB-INF/web.xml</WatchedResource> -->
+  </Context>
+</Host>
+
+==================================================================
+
+
+
+=================== WRONG ========================================
 ==================================================================
 == https://stackoverflow.com/questions/7276989/how-to-set-the-context-path-of-a-web-application-in-tomcat-7-0
 ==================================================================
