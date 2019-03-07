@@ -1,0 +1,42 @@
+메이븐은 미리 정의 하고 있는 빌드 순서를 통해 (라이프사이클) 빌드결과 삭제, 컴파일 및 자원복사, 테스트, 압축(패키지) 배포 등의 단계를 밟게 됩니다.
+Maven에서는 clean, build, site의 세 가지 Lifecycle을 기본적으로 제공하고 있습니다.
+또한 컴파일(compile), 테스트(test), 패키지(package), 배포(depooy)등의 과정은 빌드 Lifecycle에 속하게 됩니다. 
+각 단계에 따른 Goals 이 존재합니다.
+Maven에서 기본으로 제공하는 Phase를 실행하면 해당 Phase와 연결된 플러그인의 Goal이 실행됩니다.
+대표적으로 resources, compile, test, package 등이 존재합니다. 
+
+
+단계 (Phases)	    설명
+clean	            빌드된 결과물을 제거함.
+                    메이븐 빌드를 통하여 생성된 모든 산출물을 삭제한다.
+compile	            소스 코드 컴파일
+                    소스 코드를 컴파일한다
+test	            Junit 이나 TestNG 혹은 정적분석 도구와 함께 단위 테스트를 수행 (테스트 실패시 빌드 실패)
+                    단위 테스트 실행 (기본설정은 단위 테스트가 실패하면 빌드 실패로 간주함)
+package	            배포가능한 형태 (Jar, War, Ear등) 로 컴파일 코드를 패키징
+                    컴파일된 클래스 파일과 리소스 파일들을 war 혹은 jar와 같은 파일로 패키징
+integration-test	통합테스트를 진행하고, 필요할 시 패키지를 디플로이함
+install	            로컬 머신의 다른 프로젝트에서 종속 라이브러리로 사용될 수 있도록 패키지를 로컬 저장소에 설치함
+                    패키징한 파일을 로컬 저장소에 배포 (USER_HOEM/.m2/)
+deploy	            통합환경 또는 릴리즈 환경에서 다른 개발자들 혹은 프로젝트들과 공유할 수 있도록 최종 패키지를 원격 저장소에 복사
+                    패키징한 파일을 원격 저장소에 배포 (nexus 혹은 maven central 저장소)
+
+출처: https://unabated.tistory.com/entry/Maven-을-이용한-프로젝트-생성-및-활용 [랄라라]
+https://unabated.tistory.com/entry/Maven-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-%EB%B0%8F-%ED%99%9C%EC%9A%A9
+
+ - site 라이프 사이클
+  + site : 메이븐 설정파일 정보를 활용하여 프로젝트에 대한 문서 사이트를 생성한다.
+  + site-deploy : 생성한 문서 사이트를 설정되어 있는 서버에 배포
+
+출처: https://dimdim.tistory.com/entry/Maven-정리 [딤딤이의 블로그]
+https://dimdim.tistory.com/entry/Maven-%EC%A0%95%EB%A6%AC
+
+플러그인은 메이븐의 핵심 구성 요소이다. 다시 말하면 메이븐은 플러그인들의 집합이라고 할 수 있다. 
+참고로 메이븐 홈페이지의 플러그인 페이지에서 사용 가능한 플러그인들의 목록을 볼 수 있다. 
+그리고 플러그인은 관련있는 골들의 집합이다. 골은 메이븐에서 작업의 단위이라고 할 수 있다. 
+앤트(Ant)를 안다면 앤트의 태스크(task)와 유사한 것으로 생각해도 될 것이다. 
+메이븐 생명주기의 관점에서 보면 빌드 단계(Build Phase)에는 그 단계가 실행하는 골이 정해져있다. 
+예를 들면, compile 빌드 단계는 compiler 플러그인의 compile 골을 실행하고, package 빌드 단계는 jar 플러그인의 jar 골을 실행한다.
+
+출처: https://kjunine.tistory.com/entry/getting-started-with-maven-2?category=103474 [kjunine is online]
+

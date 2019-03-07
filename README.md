@@ -3,6 +3,8 @@
 https://www.youtube.com/watch?v=f3-3WhAseGs
 51:45
 
+# https://www.slipp.net/wiki/pages/viewpage.action?pageId=5177970
+
 마우스 우클릭 후 Source Action 누르면 getter/setter 생성
 
 1. 패키징 후 Server 에 war 디버깅 선택
