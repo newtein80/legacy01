@@ -1,3 +1,16 @@
+# google: maven project.build.directory
+
+https://yookeun.github.io/java/2015/07/20/maven-pacaking/
+
+
+https://dsmoon.tistory.com/entry/Maven-Quick-Guide
+
+
+http://egloos.zum.com/ssongka/v/2436224
+
+===============================================================================================================================================
+===============================================================================================================================================
+
 메이븐은 미리 정의 하고 있는 빌드 순서를 통해 (라이프사이클) 빌드결과 삭제, 컴파일 및 자원복사, 테스트, 압축(패키지) 배포 등의 단계를 밟게 됩니다.
 Maven에서는 clean, build, site의 세 가지 Lifecycle을 기본적으로 제공하고 있습니다.
 또한 컴파일(compile), 테스트(test), 패키지(package), 배포(depooy)등의 과정은 빌드 Lifecycle에 속하게 됩니다. 
@@ -8,22 +21,27 @@ Maven에서 기본으로 제공하는 Phase를 실행하면 해당 Phase와 연�
 
 단계 (Phases)	    설명
 clean	            빌드된 결과물을 제거함.
-                    메이븐 빌드를 통하여 생성된 모든 산출물을 삭제한다.
-compile	            소스 코드 컴파일
-                    소스 코드를 컴파일한다
+                  메이븐 빌드를 통하여 생성된 모든 산출물을 삭제한다.
+compile	          소스 코드 컴파일
+                  소스 코드를 컴파일한다
 test	            Junit 이나 TestNG 혹은 정적분석 도구와 함께 단위 테스트를 수행 (테스트 실패시 빌드 실패)
-                    단위 테스트 실행 (기본설정은 단위 테스트가 실패하면 빌드 실패로 간주함)
-package	            배포가능한 형태 (Jar, War, Ear등) 로 컴파일 코드를 패키징
-                    컴파일된 클래스 파일과 리소스 파일들을 war 혹은 jar와 같은 파일로 패키징
+                  단위 테스트 실행 (기본설정은 단위 테스트가 실패하면 빌드 실패로 간주함)
+package	          배포가능한 형태 (Jar, War, Ear등) 로 컴파일 코드를 패키징
+                  컴파일된 클래스 파일과 리소스 파일들을 war 혹은 jar와 같은 파일로 패키징
 integration-test	통합테스트를 진행하고, 필요할 시 패키지를 디플로이함
-install	            로컬 머신의 다른 프로젝트에서 종속 라이브러리로 사용될 수 있도록 패키지를 로컬 저장소에 설치함
-                    패키징한 파일을 로컬 저장소에 배포 (USER_HOEM/.m2/)
-deploy	            통합환경 또는 릴리즈 환경에서 다른 개발자들 혹은 프로젝트들과 공유할 수 있도록 최종 패키지를 원격 저장소에 복사
-                    패키징한 파일을 원격 저장소에 배포 (nexus 혹은 maven central 저장소)
+install	          로컬 머신의 다른 프로젝트에서 종속 라이브러리로 사용될 수 있도록 패키지를 로컬 저장소에 설치함
+                  패키징한 파일을 로컬 저장소에 배포 (USER_HOEM/.m2/)
+deploy	          통합환경 또는 릴리즈 환경에서 다른 개발자들 혹은 프로젝트들과 공유할 수 있도록 최종 패키지를 원격 저장소에 복사
+                  패키징한 파일을 원격 저장소에 배포 (nexus 혹은 maven central 저장소)
 
 출처: https://unabated.tistory.com/entry/Maven-을-이용한-프로젝트-생성-및-활용 [랄라라]
 https://unabated.tistory.com/entry/Maven-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-%EB%B0%8F-%ED%99%9C%EC%9A%A9
 
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
  - site 라이프 사이클
   + site : 메이븐 설정파일 정보를 활용하여 프로젝트에 대한 문서 사이트를 생성한다.
   + site-deploy : 생성한 문서 사이트를 설정되어 있는 서버에 배포
@@ -40,3 +58,944 @@ https://dimdim.tistory.com/entry/Maven-%EC%A0%95%EB%A6%AC
 
 출처: https://kjunine.tistory.com/entry/getting-started-with-maven-2?category=103474 [kjunine is online]
 
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+Maven Default Properties
+Note: In Maven 3.0, all pom.* properties are deprecated. Use project.* instead!
+
+Built in properties
+${basedir} represents the directory containing pom.xml 
+${version} equivalent to ${project.version} or ${pom.version} 
+
+Pom/Project properties
+All elements in the pom.xml, can be referenced with the project. prefix or using pom. as prefix. This list is just an example of some commonly used elements.
+
+${project.build.directory} results in the path to your "target" dir, this is the same as ${pom.project.build.directory} 
+${project.build.outputDirectory} results in the path to your "target/classes" dir 
+${project.name} or ${pom.name} refers to the name of the project. 
+${project.version} or ${pom.version} refers to the version of the project. 
+${project.build.finalName} refers to the final name of the file created when the built project is packaged 
+${project.artifactId} refers to the artifact id
+
+Local user settings
+Similarly, values in the user's settings.xml can be referenced using property names with settings. prefix.
+
+${settings.localRepository} refers to the path of the user's local repository. 
+${maven.repo.local} also works for backward compatibility with maven1 ?? 
+
+Environment variables
+Environment variables can be referenced using the env prefix
+
+${env.M2_HOME} returns the Maven2 installation path. 
+${java.home} specifies the path to the current JRE_HOME environment use with relative paths to get for example:
+
+<jvm>${java.home}..//bin//java.exe</jvm> 
+
+Java system properties
+All Java System Properties defined by the JVM.
+
+Custom properties in the POM
+User defined properties in the pom.xml. 
+
+<project>
+...
+  <properties>
+    <my.filter.value>hello</my.filter.value>
+  </properties>
+...
+</project>
+
+
+${my.filter.value} will result in hello if you inserted the above XML fragment in your pom.xml 
+
+https://stewie38.tistory.com/85
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+properties 파일의 특정 값을 배포 환경에 따라 값을 다르게 하기 위해서 다음과 같이 치환하고자 하는 변수를 추가한다.
+
+test.service.url=${test.service.url}
+
+
+
+예를 들어서 개발망에서는 test.service.url=http://localhost:8080 으로 셋팅하고 싶은 것이고, 라이브망에서는 test.service.url=http://localhost:9090 으로 셋팅하고 싶은 경우이다.
+
+
+
+pom.xml 파일의 build 엘리먼트 하위에 다음의 설정 추가
+
+메이븐 프로젝트이므로 기본적으로 src/main/resources 디렉토리 하위에 properties 파일을 위치하게 된다.
+
+<build>
+
+	<resources>
+
+		<resource>
+
+<directory>src/main/resources</directory>
+
+<filtering>true</filtering>
+
+		</resource>
+
+	</resources>		
+
+</build>
+
+
+
+pom.xml 파일의 profiles 엘리먼트 하위에 다음의 설정 추가
+
+<profiles>
+
+	<profile>
+
+		<id>dev</id>
+
+		<properties>
+
+			<test.service.url>http://localhost:8080</test.service.url>
+
+		</properties>
+
+	</profile>
+
+	<profile>
+
+		<id>live</id>
+
+		<properties>
+
+			<test.service.url>http://localhost:9090</test.service.url>
+
+		</properties>
+
+	</profile>
+
+</profiles>
+
+
+
+위와 같이 셋팅 후 다음과 같이 maven goals 실행하면 된다.
+
+package -Pdev : ${test.service.url}의 표현식이 http://localhost:8080 값으로 치환
+
+package -Plive : ${test.service.url}의 표현식이 http://localhost:9090 값으로 치환
+
+
+https://lng1982.tistory.com/221
+
+
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+프로그램을 개발하다보면 다양한 설정파일들을 관리하게 된다. JDBC 설정 정보, logging 설정 정보 기타 resource 등이 있을 것이다. 이런 설정 파일들은 테스트, 운영 등의 단계별로 서로 다른 설정을 가질 수 밖에 없는데, 패키지시에 매번 설정 파일을 다르게 설정 파일을 변경을 해야 한다면 여간 번거로운 상황이 될것이다.
+
+이는 maven의 profile 을 이용하여 package build 시에 다르게 구성을 할 수 있다.
+
+환경 별 리소스 폴더 구분한다.
+메인 소스에 환경 별 리소스 폴더를 만들고 각 환경에 맞는 설정 파일을 생성한다.
+
+src/main/resources-${env}
+예를 들면, 환경 별로 테스트, 운영이 있는 경우라면 아래와 비슷하게 구성할 수 있을 것이다.
+
+개발 테스트 서버 환경
+src/main/resources-dev
+src/main/resources-dev/jdbc.properties
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://127.0.0.1/database
+jdbc.username=root
+jdbc.password=1234
+실제 운영 서버 환경
+src/main/resources-real
+src/main/resources-real/jdbc.properties
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.0.1/database
+jdbc.username=admin
+jdbc.password=1111
+pom.xml에 build 추가 설정한다.
+maven pom.xml 에서 build 에 resource 를 환경에 맞는는 찾는 경로는
+
+다음은 선택된 profile 에 맞는 리소스 폴더를 classpath 에 넣는 작업이다. 기본즉으로 src/main/resources 는 들어가고 부가적으로 환경 별 리소스 폴더를 넣으면 된다. 아래 내용을 pom.xml 의 build 부분에 추가한다.
+
+<build>
+   <resources>
+        <resource>
+           <directory>src/main/resources</directory>
+        </resource>
+        <resource>
+            <directory>src/main/resources-${env}</directory>
+       </resource>
+    </resources>
+</build>
+pom.xml 에 profile 추가 설정한다.
+이제 maven profile 설정을 통해, 빌드 단계에서 원하는 리소스 폴더를 classpath 에 추가하는 작업을 진행할 것이다.
+
+우선, pom.xml 에 아래와 같이 profile 을 추가한다.
+
+<profiles>
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+         </activation>
+      <properties>
+          <env>dev</env>
+      </properties>
+    </profile>
+    <profile>
+        <id>real</id>
+        <properties>
+            <env>real</env>
+        </properties>
+    </profile>
+</profiles>
+dev profile에 설정된 <activeByDefault>은 패키지시에 특별한 명령어가 없다면 기본 프로파일이 된다.
+pom.xml 에 기본 profile 설정한다.
+maven 시에 기본 profile을 지정한다. 방법은 아래 두가지가 있다.
+
+properties에 env을 추가한다.
+
+<properties>
+    <!-- -P 로 명시하지 않을 경우 기본 프로파일 -->
+    <env>dev</env>
+</properties>
+또는, 해당 profile에 activation를 추가한다.
+
+<profile>
+   <id>dev</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+     </activation>
+     <properties>
+         <env>dev</env>
+     </properties>
+</profile>
+위 설정을 하지 않으면 src/main/resources-${env}에 있는 설정 파일을 패키지에 포함이 되지 않는다.
+
+mvn package -P 프로파일명 으로 패키징한다.
+이렇게 설정된 profile 을 maven 명령어에서 P옵션으로 같이 선택할 수 있다.
+
+mvn clean package -P dev
+mvn package 명령어를 실행 시에 -P를 추가를 하지 않을 경우에는 기본 profile로 패키징이 된다.
+
+
+http://www.devkuma.com/books/pages/4
+
+
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+1. 메이븐 사용 목적
+
+
+
+1) 빌드
+
+소스 코드를 컴파일 하고, 패키지 생성을 위한 바이너리 파일 생성
+
+
+
+2) 패키지
+
+배포를 위한 파일을 생성
+
+
+
+3) 테스트
+
+단위 테스트 수행
+
+
+
+4) 리포트
+
+빌드 수행에 대한 결과를 기록하고, 분석
+
+
+
+5) 배포
+
+로컬 혹은 원격에 빌드 내용 배포
+
+
+
+
+
+
+
+2. 메이븐 설정 파일(pom.xml) 설명
+
+<project>
+
+
+
+// *기본 설정*
+
+<modelVersion>4.0.0</modelVersion> //POM 모델의 버전
+
+<groupId>com.nhn.hyunse</groupId> //조직의 고유 id
+
+<artifactId>test</artifactId> //groupId 내의 프로젝트 고유 식별 id
+
+<version>1.0.0</version> //프로젝트의 버전, 접미사로 SNAPSHOT 사용 가능
+
+<packaging>war</packaging> //프로젝트 패키징 방식
+
+
+
+// *프로퍼티 설정*
+
+// pom 내에서 사용할 프로퍼티를 아래처럼 설정한 경우, ${jdk-version} 같은 표현으로 사용 가능하다.
+
+<properties>
+
+<jdk-version>1.8</jdk-version>
+
+<source-encoding>UTF-8</source-encoding>
+
+<resource-encoding>UTF-8</resource-encoding>
+
+<spring-framework.version>4.1.7.RELEASE</spring-framework.version>
+
+</properties>
+
+
+
+
+
+
+
+// *저장소 설정*
+
+// 외부 프로젝트 사용이 필요한 경우, 해당 프로젝트가 포함되어 있는 저장소의 주소를 포함시킨다.
+
+<repositories>
+
+      <repository>
+
+          <id>central</id>
+
+          <url>https://repo1.maven.org/maven2</url>
+
+          <releases>
+
+          <enabled>true</enabled>
+
+      </releases>
+
+</repositories>
+
+
+
+
+
+// *의존성 설정*
+
+// repositoriy에 등록되어 있는 외부의 프로젝트를 사용하고자 하는 경우 해당 프로젝트의 dependency를 쓴다.
+
+<dependencies>
+
+       <dependency>
+
+<groupId>org.springframework</groupId>
+
+<artifactId>spring-core</artifactId>
+
+<version>${spring-framework.version}</version>
+
+</dependency>
+
+</dependencies>
+
+
+
+// *플러그인 저장소 설정*
+
+// 플러그인을 사용하고자 하는 경우 해당 플러그인이 저장되어있는 저장소를 포함시킨다.
+
+<pluginRepositories>
+
+<pluginRepository>
+
+      <id>central</id>
+
+      <name>Maven Plugin Repository</name>
+
+      <url>http://repo1.maven.org/maven2</url>
+
+      <layout>default</layout>
+
+      <snapshots>
+
+        <enabled>false</enabled>
+
+      </snapshots>
+
+      <releases>
+
+        <updatePolicy>never</updatePolicy>
+
+      </releases>
+
+</pluginRepository>
+
+</pluginRepositories>
+
+
+
+// *리포팅 설정*
+
+// 외부 플러그인을 사용하여 코드에 대한 여러가지 검사를 수행할 수 있다.
+
+// ex) checkstyle, codeInspection check 등
+
+<reporting>
+
+<plugins>
+
+   // maven-pmd-plugin은 codeInspection을 체크하는 플러그인이다.
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-pmd-plugin</artifactId>
+
+<version>2.3</version>
+
+<configuration>
+
+<linkXref>true</linkXref>
+
+<sourceEncoding>utf-8</sourceEncoding>
+
+<minimumTokens>100</minimumTokens>
+
+<targetJdk>1.5</targetJdk>
+
+</configuration>
+
+</plugin>
+
+</plugins>
+
+</reporting>
+
+
+
+
+
+// *프로파일 설정*
+
+// 환경에 따라 세팅을  다르게 할 필요가 있을 때 사용한다.
+
+// 가령 local 환경과 서버 환경에서의 배포 경로를 다르게 한다거나,
+
+// 테스트를 하려는 경우 maven.test.skip 변수를 false로 지정한다는 등의 세팅이 가능하다.
+
+// mvn -Plocal 처럼 메이븐 실행시 프로파일 선택이 가능하다.
+
+<profiles>
+
+<profile>
+
+<id>local</id>
+
+<activation>
+
+<activeByDefault>true</activeByDefault> //디폴트
+
+</activation>
+
+<properties>
+
+<env>local</env>
+
+<deploy-dir>target/m2e-wtp/web-resources</deploy-dir>
+
+</properties>
+
+</profile>
+
+<profile>
+
+<id>test</id>
+
+<properties>
+
+<env>alpha</env>
+
+<deploy-dir>target/classes</deploy-dir>
+
+    <maven.test.skip>false</maven.test.skip>
+
+</properties>
+
+</profile>
+
+<profile>
+
+<id>alpha</id>
+
+<properties>
+
+<env>alpha</env>
+
+<deploy-dir>target/classes</deploy-dir>
+
+</properties>
+
+</profile>
+
+</profiles>
+
+ 
+
+// *빌드 설정*
+
+// 빌드시 사용하고자 하는 플러그인 등록, 소스 및 자원의 경로 지정 등을 설정한다. 
+
+<build>
+
+// *플러그인 설정*
+
+<plugins>
+
+
+
+// maven-resources-plugin 을 사용하면, 필터링 사용이 가능한데
+
+// 아래에서는 filtering이 true인 경우 해당 프로파일에 설정된 변수인 "env"의 경로에 있는 리소스를 사용하게 된다.
+
+// 이를 활용해 환경에 따라 다른 DB를 보게 하거나, 로그 출력 방식을(에러 레벨) 다르게 잡을 수 있다. 
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-resources-plugin</artifactId>
+
+<version>2.6</version>
+
+<configuration>
+
+<encoding>UTF-8</encoding>
+
+<nonFilteredFileExtensions>
+
+<nonFilteredFileExtension>p12</nonFilteredFileExtension> //p12 확장자를 가진 파일은 필터링 제외
+
+</nonFilteredFileExtensions>
+
+</configuration>
+
+</plugin>
+
+
+
+
+
+// maven-clean-plugin 사용 목적은 빌드시 생성되는 파일들을 지우는 것이다.
+
+// clean goal 실행시, 디폴트로 project.build.directory, project.build.outputDirectory, project.build.outputDirectory, project.build.testOutputDirectory, project.reporting.outputDirectory를 삭제한다.
+
+// 추가적으로 아래에 filesets 설정을 통해 삭제 대상 추가 및 제외가 가능하다.
+
+<plugin>
+
+<artifactId>maven-clean-plugin</artifactId>
+
+<version>2.5</version>
+
+<configuration>
+
+<filesets>
+
+<fileset>
+
+<directory>${deploy-dir}/WEB-INF/lib</directory>
+
+<includes>
+
+<include>*.jar</include>
+
+</includes>
+
+</fileset>
+
+<fileset>
+
+<directory>${deploy-dir}/WEB-INF/classes</directory>
+
+<includes>
+
+<include>**/*</include>
+
+</includes>
+
+</fileset>
+
+<fileset>
+
+<directory>${deploy-dir}/WEB-INF</directory>
+
+<includes>
+
+<include>web.xml</include>
+
+</includes>
+
+</fileset>
+
+</filesets>
+
+</configuration>
+
+</plugin>
+
+
+
+// maven-compiler-plugin은 컴파일시 사용되는 플러그인이다.
+
+// 사용하고 있는 jdk 버전을 넣어준다.
+
+<plugin>
+
+<artifactId>maven-compiler-plugin</artifactId>
+
+<version>3.1</version>
+
+<configuration>
+
+<source>${jdk-version}</source>
+
+<target>${jdk-version}</target>
+
+<encoding>${source-encoding}</encoding>
+
+</configuration>
+
+</plugin>
+
+
+
+// maven-war-plugin은 package 실행시 war 파일을 생성하는 과정을 관장한다.
+
+// 아래의 설정을 통해 webResources>resource>directory의 파일들을 targetPath인 WEB-INF 디렉토리에 복사한다.
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-war-plugin</artifactId>
+
+<version>2.4</version>
+
+<configuration>
+
+<webXml>${deploy-dir}/WEB-INF/web.xml</webXml>
+
+<encoding>UTF-8</encoding>
+
+<overwrite>true</overwrite>
+
+<filters>
+
+<filter>src/main/resources-${env}/build.properties</filter>
+
+</filters>
+
+
+ <webResources>
+
+<resource>
+
+<directory>src/main/webapp/WEB-INF</directory>
+
+<includes>
+
+<include>web.xml</include>
+
+</includes>
+
+<targetPath>WEB-INF</targetPath>
+
+<filtering>true</filtering>
+
+</resource>
+
+</webResources>
+
+
+
+</configuration>
+
+</plugin>
+
+
+
+// maven-surefire-plugin은 test시, 유닛 테스트를 실행하는데 사용된다.
+
+<plugin>
+
+<groupId>org.apache.maven.plugins</groupId>
+
+<artifactId>maven-surefire-plugin</artifactId>
+
+<version>2.4.2</version>
+
+<configuration>
+
+<testFailureIgnore>true</testFailureIgnore>
+
+<excludes>
+
+<exclude>**/integration/**/*Test.java</exclude>
+
+</excludes>
+
+</configuration>
+
+</plugin>
+
+</plugins>
+
+
+
+// *리소스 경로 지정*
+
+// applicationContext.xml 파일과 같은 설정 파일의 경로를 지정한다.
+
+<resources>
+
+// 공통 사용 리소스
+
+<resource>
+
+<filtering>true</filtering>
+
+<directory>src/main/resources</directory>
+
+<includes>
+
+<include>*.xml</include>
+
+<include>**</include>
+
+</includes>
+
+</resource>
+
+
+
+// 환경별 사용 리소스
+
+<resource>
+
+<filtering>true</filtering>
+
+<directory>src/main/resources-${env}</directory>
+
+</resource>
+
+</resources>
+
+<filters>
+
+// maven-resources-plugin을 적용하고, 아래의 필터를 적용하면 빌드 시점에 <resource> 중 필터링 true인 것들을
+
+// 대상으로 ${...} 변수를 찾아 할당하게 된다.
+
+<filter>src/main/resources-${env}/build.properties</filter>
+
+</filters>
+
+
+
+</bulid>
+
+
+
+</project>
+
+
+
+
+
+<환경 별로 사용 프로퍼티 나누기>
+
+1) bulid>plugins에 maven-resources-plugin 적용
+
+2) profile에 각 프로필별로 환경 변수로 쓸 값 지정(위에서는 ${env})
+
+3) build>filters에 ${env}를 포함한 프로퍼티 파일 경로 설정
+
+4) build>resources에 리소스 filtering을 true로 하고, 프로퍼티의 변수들이 적용될 값들이 적혀있는 설정 파일 지정
+
+5) maven-war-plugin을 통해 패키지시, 환경 별 리소스 파일 복사되도록 설정
+
+
+
+
+
+<모조(mojo)>
+
+메이븐은 여러가지 플러그인이 있으며 각 플러그인들은 하나 이상의 goal을 갖고 있다.
+
+goal 이란, 커맨드와 유사한 개념이며, 아래처럼 ${플러그인명}:${goal}의 조합으로 실행된다.
+
+ex)  mvn compiler:compile cobertura:cobertura
+
+
+
+이러한, 메이븐의 goal을 모조라고 하며, mojo의 사전적 의미는 마력이다.(플러그드 인 될수록 마력이 쎄져서 그런듯?)
+
+
+
+
+
+
+
+
+
+3. 메이븐 라이프 사이클
+
+메이븐은 여러 goal들이 순차적으로 실행되는 구조라고 볼 수 있다.
+
+디딤돌을 밟으며 강을 건너는 것과 같다.
+
+다섯번째 돌에 가려면 1~4번째 돌을 순차적으로 지나게 되는 것이다.
+
+이러한 메이븐의 대략적 디폴트 라이프 사이클은 아래와 같다.
+
+
+
+validate - 정상 여부 및 빌드 가능 여부 판단
+
+initialize - 빌드 상태 초기화, 작업 디렉토리 생성
+
+compile - 프로젝트 소스 코드 컴파일
+
+test - 단위 테스트 수행
+
+package - 컴파일 된 코드를 war 등 설정에 따라 패키징
+
+install - 생성한 패키지를 로컬 저장소에 설치
+
+deploy - 생성한 패키지를 원격 저장소에 설치
+
+
+
+그리고 clean goal의 경우  따로 노는데 그 이유는 다른 라이프 사이클과 엮이지 않고, 단순히 빌드 결과물을 지워주는 작업을 하기 때문이다.
+
+
+
+ex) mvn clean compile -Plocal -DtestSkip=true
+
+
+https://m.blog.naver.com/PostView.nhn?blogId=duco777&logNo=220909387300&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+[Java/Maven] Maven기반 빌드환경에서 로컬파일 빌드시 추가방법
+Naven기반으로 라이브러리 및 의존성관리를 하다보면 간혹,   
+MVN-Maven원격중앙저장소에 올라와 있지 않은 라이브러리들이 있는데   
+이런 라이브러리들은 어쩔 수 해당 사이트에 가서 필요한 버전의 라이브러리 파일을 받아 로컬에서 관리해야 한다.
+
+Maven기반으로 관리되는 라이브러리의 경우 파일들은 ~/.m2/repository 폴더에 존재하게 되고 버전에 따른 의존성 관리가 된다.   
+
+웹어플리케이션 프로젝트 기반에서 배포를 위해 빌드를 수행하면   
+이 폴더를 참조하여 의존성 관리에 의해 필요한 lib파일들이 {프로젝트루트}/WEB-INF/lib로 이동 - 정확히는 복사 - 된 후, war 파일로 패키징이 된다.
+
+여기에 속하지 않는 로컬파일들,   
+즉 위에서 얘기한 MVN에 올라와 있지 않는 별도의 라이브러리,   
+또는 커스터마이즈한 라이브러리 파일들을 빌드시에 WEB-INF/lib에 포함시키기 위한 설정이다.
+
+POM.xml - Maven 설정파일- 파일에 아래와 같이 plug-in tag를 추가한다.
+
+POM.xml 파일 추가항목
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-war-plugin</artifactId>
+​
+   <configuration>
+       <webResources>
+           <resource>
+               <!-- 로컬 lib파일 경로 -->
+               <directory>${project.basedir}/local-repo</directory>
+               <includes>
+                   <include>추가할라이브러리.jar</include>
+                  ...
+                  ...
+               </includes>
+               <targetPath>WEB-INF/lib</targetPath>
+           </resource>
+       </webResources>
+   </configuration>
+</plugin>
+Team-Share 프로젝트인 경우,   
+${project.basedir}아래의 폴더는 멤버모두 생성을 해 놓은 약속된 폴더여야 한다.   
+<directory>의 경로는 팀과의 프로젝트를 공유하는 환경에서는 절대경로를 사용하지 않아야 한다.
+
+이렇게 수정한 후,
+mvn package를 하면 지정된 폴더에, 지정된 파일들이 <targetPath>에 지정된 경로, 
+즉 WEB-INF/lib 폴더로 복사, 이동하게 된다.
+
+실제로 많이 발생하는 케이스는 아니지만   
+ojdbc.jar - 오라클 JDBC 라이브러리 - 의 경우, 사용하고 하는 오라클 버전의 JDBC라이브러리가 MVN에 올라오지 않아   
+오라클 사이트에서 버전에 맞게 다운받거나, 사용하는 오라클DB솔루션에 포함되어 있는 lib를 추출하여   
+로컬저장소에 등록하고 사용하는 경우가 많다.
+
+
+
+출처: https://yonguri.tistory.com/entry/JavaMaven-Maven기반-빌드환경에서-로컬파일-빌드시-추가방법 [Yorath's 블로그]
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+https://whiteship.tistory.com/1984
+https://maven.apache.org/guides/getting-started/
+https://www.google.com/search?q=maven+%EA%B0%95%EC%A2%8C&rlz=1C1GIGM_koKR760KR760&ei=ag-CXMO8M6uxmAWU776IBw&start=20&sa=N&ved=0ahUKEwjDmYD--PHgAhWrGKYKHZS3D3E4ChDy0wMIcA&biw=1680&bih=947
+https://www.google.com/search?q=maven+project.build.directory&lr=lang_ko&rlz=1C1GIGM_koKR760KR760&tbs=lr:lang_1ko&ei=IRSCXOnPNKSvmAWLx4Iw&start=30&sa=N&ved=0ahUKEwip5Ma9_fHgAhWkF6YKHYujAAY4FBDy0wMIag&biw=1680&bih=947
+http://egloos.zum.com/ssongka/v/2436224
+https://dsmoon.tistory.com/entry/Maven-Quick-Guide
+https://zetawiki.com/wiki/%EC%95%84%ED%8C%8C%EC%B9%98_Maven
+https://yookeun.github.io/java/2015/07/20/maven-pacaking/
+https://yonguri.tistory.com/entry/Java-Java-Memory-%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%9D%B4%ED%95%B4?category=359079
+https://m.blog.naver.com/PostView.nhn?blogId=duco777&logNo=220765466402&targetKeyword=&targetRecommendationCode=1
+http://www.devkuma.com/books/pages/4
+https://www.lesstif.com/pages/viewpage.action?pageId=14090588
+https://www.lesstif.com/pages/viewpage.action?pageId=18220309
+https://lng1982.tistory.com/221
+https://stewie38.tistory.com/85
+https://jekalmin.tistory.com/entry/maven-%EB%A9%94%EC%9D%B4%EB%B8%90-%EA%B8%B0%EB%B3%B8-properties
+https://cornswrold.tistory.com/69
+
+
+===============================================================================================================================================
+===============================================================================================================================================
+
+maven pacaking skip test
+> mvn package -DskipTests
+> mvn -Dmaven.test.skip=true package
+
+
+===============================================================================================================================================
+===============================================================================================================================================

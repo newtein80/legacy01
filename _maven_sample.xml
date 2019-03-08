@@ -8,7 +8,7 @@
     <packaging>war</packaging>
     <version>1.0.0</version>
 
-    <!-- MAVEN 에서 사용되는 버전들 모음 -->
+    <!-- MAVEN 에서 사용되는 버전들을 properties 로 관리하여 denpendencies 등에서 사용 -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -28,9 +28,20 @@
         <org.apache.commons.codec-version>1.11</org.apache.commons.codec-version>
 
         <org.postgresql-version>9.3-1102.jdbc41</org.postgresql-version>
+        <!-- 
+        POM.xml에서 직접 속성을 설정할 수도 있다.
+        <properties>
+            <test>
+                <value>hello</value>
+            </test>
+            <greeting.hello>hi</greeting.hello>
+        </properties>
+        
+        위와 같이 설정하게 되면 ${test.value} 또는 ${greeting.hello} 속성을 사용할 수 있게 된다.
+        -->
     </properties>
 
-    <!-- profile definition -->
+    <!-- profile definition: id 와 각 id별 properties 로 관리하여 각 id별 설정을 달리할 수 있음 -->
     <profiles>
         <profile>
             <id>test</id>
@@ -63,7 +74,9 @@
         </profile>
     </profiles>
 
+    <!-- 빌드 관련 설정 -->
     <build>
+        <!-- 기본 빌드 파일 명 - 해당 파일명도 profile 을 생성하여 관리할 수 있음 -->
         <finalName>PJS</finalName>
         <plugins>
             <plugin>
@@ -84,6 +97,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.1</version>
                 <configuration>
+                    <!-- properties 에서 설정한 값들을 사용 -->
                     <source>${java-version}</source>
                     <target>${java-version}</target>
                     <encoding>${java-encoding}</encoding>
@@ -126,6 +140,24 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
+                            <!--
+                            * project
+                            빌드 : ${project.build.directory} = ${pom.build.directory} = ‘target’;
+                            빌드 : ${project.build.outputDirectory} = ‘target/classes’;
+                            프로젝트 이름 : ${project.name} = ${pom.name} = / 엘리먼트 설정 값;
+                            프로젝트 버전 : ${project.version} = ${pom.version} = ${version} = / 엘리먼트 설정 값;
+                            최종 파일 이름 : ${project.build.finalName}= // 엘리먼트 설정 값
+                            
+                            * settings
+                            로컬 저장소 경로 : ${settings.localRepository}
+                            
+                            * environment variable
+                            시스템 PATH : {env.PATH}
+                            시스템 JAVA_HOME : {env.JAVA_HOME}
+                            
+                            * etc
+                            pom.xml이 위치하는 디렉토리 : ${basedir}
+                            -->
                             <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes/</outputDirectory>
                             <encoding>UTF-8</encoding>
                             <resources>
@@ -187,6 +219,7 @@
             </plugin>
         </plugins>
 
+        <!-- Maven에서는 리소스 파일이 src/main/resources 디렉토리에 있으면 해당 파일들을 리소스 파일로 간주 -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>

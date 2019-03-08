@@ -3,7 +3,19 @@
 https://www.youtube.com/watch?v=f3-3WhAseGs
 51:45
 
+# http://devstory.ibksplatform.com/2017/08/spasigle-page-applications.html
+
+# https://www.lesstif.com/pages/viewpage.action?pageId=14090588
+
+# https://m.blog.naver.com/PostList.nhn?blogId=duco777
+
+# https://yonguri.tistory.com/entry/Java-Java-Memory-%EA%B5%AC%EC%A1%B0%EC%9D%98-%EC%9D%B4%ED%95%B4?category=359079
+
+# https://whiteship.tistory.com/1984
+
 # https://www.slipp.net/wiki/pages/viewpage.action?pageId=5177970
+
+google : docker 사용법
 
 마우스 우클릭 후 Source Action 누르면 getter/setter 생성
 
