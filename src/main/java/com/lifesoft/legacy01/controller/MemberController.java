@@ -37,7 +37,7 @@ public class MemberController {
         logger.info("member list call...");
         List<MemberDTO> list = memberService.memberList();
         model.addAttribute("list", list);
-        return "";
+        return "member/list";
     }
 
     /**
